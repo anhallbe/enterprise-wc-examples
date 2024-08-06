@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IdsDropdownComponent } from './ids-dropdown.component';
 import { ExampleComponent } from './demos/example/example.component';
-import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
+import { ModalComponent } from './demos/modal/modal.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
+import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
+import { IdsDropdownComponent } from './ids-dropdown.component';
 
 export const routes: Routes = [
-  { 
+  {
     path: '',
     component: IdsDropdownComponent
   },
@@ -34,7 +35,15 @@ export const routes: Routes = [
       type: 'Example',
       description: 'Shows various sized dropdowns',
     }
-  }
+  },
+  {
+    path: 'modal',
+    component: ModalComponent,
+    data: {
+      type: 'Example',
+      description: 'Tests dropdown in a Soho modal',
+    }
+  },
 ];
 
 @NgModule({
